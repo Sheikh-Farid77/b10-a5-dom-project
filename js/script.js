@@ -69,7 +69,20 @@ feniBtn.addEventListener('click', function(){
     getId('balance').innerText = mainBalance;
 })
 
+// quota part 03
 
+quotaBtn.addEventListener('click', function(){
+    const inputValue3 = getValue('quotaInput');
+    if(inputValue3 <= 0 || isNaN(inputValue3)){
+        alert('Please Enter Valid Input')
+        return;
+    }
+    quotaBalance = quotaBalance + inputValue3;
+    mainBalance = mainBalance - inputValue3
+
+    getId('quotaBalance').innerText = quotaBalance;
+    getId('balance').innerText = mainBalance;
+})
 
 
 
