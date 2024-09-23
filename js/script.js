@@ -54,6 +54,21 @@ noakhaliBtn.addEventListener('click', function(){
     getId('balance').innerText = mainBalance;
 })
 
+// feni part 02
+
+feniBtn.addEventListener('click', function(){
+    const inputValue2 = getValue('feniInput');
+    if(inputValue2 <= 0 || isNaN(inputValue2)){
+        alert('Please Enter Valid Input')
+        return;
+    }
+    feniBalance = feniBalance + inputValue2;
+   mainBalance = mainBalance - inputValue2
+
+    getId('feniBalance').innerText = feniBalance;
+    getId('balance').innerText = mainBalance;
+})
+
 
 
 
