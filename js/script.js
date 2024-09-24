@@ -65,7 +65,6 @@ noakhaliBtn.addEventListener('click', function () {
     `;
 
     const history = document.getElementById('history-section');
-    console.log(div)
 
 
     history.insertBefore(div, history.firstChild);

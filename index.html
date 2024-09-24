@@ -13,6 +13,29 @@
       href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Link: TailwindCSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              Primary: "#B4F461",
+              Secondary: "#F9F7F3",
+            },
+            fontFamily: {
+              Lexend: ["Lexend", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
   </head>
 
   <body class="font-Lexend">
