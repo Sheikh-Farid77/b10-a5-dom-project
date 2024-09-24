@@ -11,9 +11,6 @@ let feniBalance = getText('feniBalance');
 const quotaBtn = document.getElementById('quotaBtn');   
 let quotaBalance = getText('quotaBalance');
 
-// validation
-
-
 
 // blog page navigate
 function faqPage(){
@@ -39,6 +36,8 @@ function getId(id){
     return identity;
 }
 
+
+
 // Noakhali part 01
 
 noakhaliBtn.addEventListener('click', function(){
@@ -47,11 +46,30 @@ noakhaliBtn.addEventListener('click', function(){
         alert('Please Enter Valid Input')
         return;
     }
+    if(inputValue1 > mainBalance){
+        alert('You Dont Have Sufficient Balance')
+        return;
+    }
     noakhaliBalance = noakhaliBalance + inputValue1;
    mainBalance = mainBalance - inputValue1
 
     getId('noakhaliBalance').innerText = noakhaliBalance;
     getId('balance').innerText = mainBalance;
+
+    const time = new Date();
+    const div = document.createElement('div');
+    div.className = 'border-2 p-4 mt-4';
+    div.innerHTML = `
+        <h2 class="text-lg font-bold mb-4">${inputValue1} Taka is Donated for famine-2024 at Noakhali, Bangladesh</h2>
+        <p>Date : ${time}</p>
+    `;
+    
+    const history = document.getElementById('history-section');
+    
+  
+    history.insertBefore(div, history.firstChild);
+    my_modal_1.showModal()
+    
 })
 
 // feni part 02
@@ -62,11 +80,29 @@ feniBtn.addEventListener('click', function(){
         alert('Please Enter Valid Input')
         return;
     }
+    if(inputValue2 > mainBalance){
+        alert('You Dont Have Sufficient Balance')
+        return;
+    }
     feniBalance = feniBalance + inputValue2;
    mainBalance = mainBalance - inputValue2
 
     getId('feniBalance').innerText = feniBalance;
     getId('balance').innerText = mainBalance;
+
+    const time = new Date();
+    const div = document.createElement('div');
+    div.className = 'border-2 p-4 mt-4';
+    div.innerHTML = `
+        <h2 class="text-lg font-bold mb-4">${inputValue2} Taka is Donated for Flood Relief in Feni,Bangladesh</h2>
+        <p>Date : ${time}</p>
+    `;
+    
+    const history = document.getElementById('history-section');
+    
+  
+    history.insertBefore(div, history.firstChild);
+    my_modal_1.showModal()
 })
 
 // quota part 03
@@ -77,13 +113,61 @@ quotaBtn.addEventListener('click', function(){
         alert('Please Enter Valid Input')
         return;
     }
+    if(inputValue3 > mainBalance){
+        alert('You Dont Have Sufficient Balance')
+        return;
+    }
     quotaBalance = quotaBalance + inputValue3;
     mainBalance = mainBalance - inputValue3
 
     getId('quotaBalance').innerText = quotaBalance;
     getId('balance').innerText = mainBalance;
+
+    const time = new Date();
+    const div = document.createElement('div');
+    div.className = 'border-2 p-4 mt-4';
+    div.innerHTML = `
+        <h2 class="text-lg font-bold mb-4">${inputValue3} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</h2>
+        <p>Date : ${time}</p>
+    `;
+    
+    const history = document.getElementById('history-section');
+    
+  
+    history.insertBefore(div, history.firstChild);
+    my_modal_1.showModal()
 })
 
+// donation and history toggle
+
+function historyPart(){
+    const btn = getId('donateBtn')
+    btn.classList.remove('bg-Primary')
+    btn.classList.add('border-gray-500')
+    const btn2 = getId('historyBtn');
+    btn2.classList.remove('border-gray-500')
+    btn2.classList.add('bg-Primary')
+    const main = getId('main-container');
+    main.classList.add('hidden')
+    const history = getId('history-section')
+    history.classList.remove('hidden')
+
+
+
+}
+
+function donation(){
+    const btn = getId('donateBtn')
+    const btn2 = getId('historyBtn');
+    btn.classList.add('bg-Primary')
+    btn.classList.remove('border-gray-500')
+    btn2.classList.add('border-gray-500')
+    btn2.classList.remove('bg-Primary')
+    const main = getId('main-container');
+    main.classList.remove('hidden')
+    const history = getId('history-section')
+    history.classList.add('hidden')
+}
 
 
 
