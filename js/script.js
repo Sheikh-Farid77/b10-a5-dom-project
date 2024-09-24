@@ -58,13 +58,14 @@ noakhaliBtn.addEventListener('click', function(){
 
     const time = new Date();
     const div = document.createElement('div');
-    div.className = 'border-2 p-4 mt-4';
+    div.classList.add('border', 'border-[#1111111a]', 'rounded-2xl', 'p-8', 'mt-5');
     div.innerHTML = `
         <h2 class="text-lg font-bold mb-4">${inputValue1} Taka is Donated for famine-2024 at Noakhali, Bangladesh</h2>
         <p>Date : ${time}</p>
     `;
     
     const history = document.getElementById('history-section');
+    console.log(div)
     
   
     history.insertBefore(div, history.firstChild);
@@ -92,7 +93,7 @@ feniBtn.addEventListener('click', function(){
 
     const time = new Date();
     const div = document.createElement('div');
-    div.className = 'border-2 p-4 mt-4';
+    div.classList.add('border', 'border-[#1111111a]', 'rounded-2xl', 'p-8', 'mt-5');
     div.innerHTML = `
         <h2 class="text-lg font-bold mb-4">${inputValue2} Taka is Donated for Flood Relief in Feni,Bangladesh</h2>
         <p>Date : ${time}</p>
@@ -125,7 +126,8 @@ quotaBtn.addEventListener('click', function(){
 
     const time = new Date();
     const div = document.createElement('div');
-    div.className = 'border-2 p-4 mt-4';
+    div.classList.add('border', 'border-[#1111111a]', 'rounded-2xl', 'p-8', 'mt-5');
+
     div.innerHTML = `
         <h2 class="text-lg font-bold mb-4">${inputValue3} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</h2>
         <p>Date : ${time}</p>
@@ -151,6 +153,11 @@ function historyPart(){
     main.classList.add('hidden')
     const history = getId('history-section')
     history.classList.remove('hidden')
+    const header = getId('header')
+    header.classList.remove('fixed')
+    header.classList.remove('top-0')
+    header.classList.remove('left-0')
+    header.classList.remove('w-full')
 
 
 
@@ -167,8 +174,15 @@ function donation(){
     main.classList.remove('hidden')
     const history = getId('history-section')
     history.classList.add('hidden')
+    const header = getId('header')
+    header.classList.add('fixed')
+    header.classList.add('top-0')
+    header.classList.add('left-0')
+    header.classList.add('w-full')
 }
 
+
+// fixed top-0 left-0 w-full
 
 
 

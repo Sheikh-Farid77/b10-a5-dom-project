@@ -1,72 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frequently Asked Question</title>
-     <!-- css file link -->
-     <link rel="stylesheet" href="./css/main.css" />
-     <!-- google font link -->
-     <link rel="preconnect" href="https://fonts.googleapis.com" />
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frequently Asked Question</title>
+  <!-- css file link -->
+  <link rel="stylesheet" href="./css/main.css" />
+  <!-- google font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet" />
 </head>
+
 <body class="font-Lexend">
-   <header>
-           <!-- nav bar start -->
-           <nav class="container mx-auto mb-8 px-3">
-            <div class="navbar">
-                <div class="navbar-start">
-                    <a class="btn-ghost rounded-lg cursor-pointer bg-Primary px-8 py-3 text-xl font-semibold">Blog</a>
-                </div>
-                <!-- nav bar center part -->
-                <div class="navbar-center hidden lg:flex">
-                    <div class="flex items-center gap-4">
-                        <img src="./assets/logo.png" alt="logo">
-                        <h3 class="text-xl font-semibold">Donate Bangladesh</h3>
-                    </div>
-                </div>
-                <div class="navbar-end">
-                    <div class="flex items-center">
-                        <img src="./assets/coin.png" alt="coin">
-                        <h3 class="text-xl font-medium text-slate-500"><span>5500</span>BDT</h3>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <!-- nav bar end -->
-   </header>
-   <main class="container mx-auto px-3">
-    <!-- qna section -->
-    <div class="join join-vertical w-full">
-        <div class="collapse collapse-arrow join-item border-base-300 border">
-          <input type="radio" name="my-accordion-4" checked="checked" />
-          <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-          <div class="collapse-content">
-            <p>hello</p>
+  <header>
+    <!-- nav bar start -->
+    <nav class="container mx-auto mb-8 px-3">
+      <div class="navbar">
+        <div class="navbar-start">
+          <a class="btn-ghost rounded-lg cursor-pointer bg-Primary px-8 py-3 text-xl font-semibold">Blog</a>
+        </div>
+        <!-- nav bar center part -->
+        <div class="navbar-center hidden lg:flex">
+          <div class="flex items-center gap-4">
+            <img src="./assets/logo.png" alt="logo">
+            <h3 class="text-xl font-semibold">Donate Bangladesh</h3>
           </div>
         </div>
-        <div class="collapse collapse-arrow join-item border-base-300 border">
-          <input type="radio" name="my-accordion-4" />
-          <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-          <div class="collapse-content">
-            <p>hello</p>
-          </div>
-        </div>
-        <div class="collapse collapse-arrow join-item border-base-300 border">
-          <input type="radio" name="my-accordion-4" />
-          <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-          <div class="collapse-content">
-            <p>hello</p>
+        <div class="navbar-end">
+          <div class="flex items-center">
+            <img src="./assets/coin.png" alt="coin">
+            <h3 class="text-xl font-medium text-slate-500"><span>100000</span>BDT</h3>
           </div>
         </div>
       </div>
-      <button onclick="homePage()" class="btn-ghost rounded-lg cursor-pointer bg-Primary px-8 py-3 text-xl font-semibold mt-5">Home</button>
+    </nav>
+    <!-- nav bar end -->
+  </header>
+  <main class="container mx-auto px-3">
+    <!-- qna section -->
+    <div class="join join-vertical w-full">
+      <div class="collapse collapse-arrow join-item border-base-300 border">
+        <input type="radio" name="my-accordion-4" checked="checked" />
+        <div class="collapse-title text-xl font-medium">What is the DOM?</div>
+        <div class="collapse-content">
+          <p>The DOM (Document Object Model) is a programming interface for web documents. It represents the structure of a document as a tree of objects, where each node is an element, attribute, or text from the HTML or XML document. JavaScript can be used to interact with and manipulate these nodes.
 
-   </main>
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow join-item border-base-300 border">
+        <input type="radio" name="my-accordion-4" />
+        <div class="collapse-title text-xl font-medium">How is the DOM Different form HTML?</div>
+        <div class="collapse-content">
+          <p>HTML is the markup language used to structure web content, while the DOM is an object-based representation of that HTML content in the browser. When a web page loads, the browser converts HTML into the DOM, making it accessible and modifiable using JavaScript.
 
-<!-- js file link -->
- <script src="./js/script.js"></script>
- <script src="./js/utility.js"></script>
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow join-item border-base-300 border">
+        <input type="radio" name="my-accordion-4" />
+        <div class="collapse-title text-xl font-medium">What are DOM Elements and Nodes?</div>
+        <div class="collapse-content">
+          <p>DOM elements represent HTML tags (like div, p, a), while DOM nodes are the general term for all items in the DOM tree, which includes elements, text, attributes, and comments. Every element is a node, but not every node is an element.
+
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow join-item border-base-300 border">
+        <input type="radio" name="my-accordion-4" />
+        <div class="collapse-title text-xl font-medium">What is Event Delegation in DOM?</div>
+        <div class="collapse-content">
+          <p>Event delegation is a technique in JavaScript where you add a single event listener to a parent element instead of adding listeners to individual child elements. The event listener can capture events from child elements due to event bubbling. This improves performance when dealing with large numbers of elements.</p>
+        </div>
+      </div>
+    </div>
+    <button onclick="homePage()"
+      class="btn-ghost rounded-lg cursor-pointer bg-Primary px-8 py-3 text-xl font-semibold mt-5">Home</button>
+
+  </main>
+
+  <!-- js file link -->
+  <script src="./js/script.js"></script>
+  <script src="./js/utility.js"></script>
 </body>
+
 </html>
