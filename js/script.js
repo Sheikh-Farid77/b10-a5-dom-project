@@ -14,10 +14,10 @@ let quotaBalance = getText('quotaBalance');
 
 // blog page navigate
 function faqPage() {
-    window.location.href = '../faq.html'
+    window.location.href = 'faq.html'
 }
 function homePage() {
-    window.location.href = '../index.html'
+    window.location.href = 'index.html'
 }
 
 // common function
